@@ -48,9 +48,7 @@
   width: 231px;
 
   font-style: normal;
-  font-weight: $main-font-weigh;
-  font-size: $main-font-size;
-  line-height: 1.5;
+  @include font($main-font-weigh, $main-font-size, 1.5);
 
   &:not(:last-child) {
     margin-bottom: 9px;
@@ -110,9 +108,7 @@
   &::placeholder {
     color: $text-decor-color;
 
-    font-weight: $main-font-weigh;
-    font-size: 16px;
-    line-height: 1.25;
+    @include font($main-font-weigh, 16px, 1.25);
     letter-spacing: 0.03em;
   }
 
@@ -141,9 +137,7 @@
   box-shadow: $box-shadow-button;
 
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
+  @include font(700, 16px, 1.88);
   letter-spacing: 0.06em;
 
   transition: border-color $transition-timing, background $transition-timing;

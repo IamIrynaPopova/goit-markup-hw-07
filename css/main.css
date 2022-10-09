@@ -718,7 +718,8 @@ img {
   cursor: pointer;
 }
 
-.projects-set__item:hover, .projects-set__category .projects-set__item:focus .projects-set__category {
+.projects-set__item:hover,
+.projects-set__item:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -762,7 +763,6 @@ img {
 
 .projects-set__category {
   color: #757575;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -854,7 +854,6 @@ img {
 .modal-form__title {
   margin-bottom: 12px;
   color: #212121;
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;

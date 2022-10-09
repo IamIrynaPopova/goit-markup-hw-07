@@ -45,9 +45,7 @@
 
   color: $secondary-color;
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font(500, 16px, 1.19);
   letter-spacing: 0.03em;
   text-align: center;
 }
@@ -57,9 +55,7 @@
 
   color: $main-color-text;
 
-  font-weight: $main-font-weigh;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font($main-font-weigh, 16px, 1.19);
   text-align: center;
   letter-spacing: 0.03em;
 }
