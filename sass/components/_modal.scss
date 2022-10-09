@@ -9,8 +9,7 @@
 
   background: $background-color-modal;
   opacity: 1;
-  transition: opacity $transition-timing,
-    visibility $transition-timing;
+  transition: opacity $transition-timing, visibility $transition-timing;
 }
 
 .backdrop.is-hidden .modal {
@@ -41,38 +40,37 @@
   pointer-events: none;
 }
 
-.close-button {
+.modal__close {
   position: absolute;
+  @extend %flex;
+  justify-content: center;
   width: 30px;
   height: 30px;
   padding: 0;
   top: 8px;
   right: 8px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
 
   background-color: $main-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.icon-close {
+.modal__icon {
   width: 18px;
   height: 18px;
 
   fill: $icon-secondary-color;
 
   transition: fill $transition-timing;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
-.icon-close:hover,
-.icon-close:focus {
-  fill: $accent-color;
-}
-
-.form-title {
+.modal-form__title {
   margin-bottom: 12px;
 
   color: $secondary-color;
@@ -84,14 +82,14 @@
   text-align: center;
 }
 
-.inputs {
+.modal-form__inputs {
   font-style: normal;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
 
-.icon-form {
+.modal-form__icon {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -104,14 +102,32 @@
   transition: fill $transition-timing;
 }
 
-.input-wrap {
+.modal-form__wrap {
   position: relative;
   display: inline-block;
   width: 100%;
   margin-top: 4px;
 }
 
-.input-wrap .input {
+.modal-form__wrap:hover > .modal-form__input {
+  border-color: $accent-color;
+  cursor: pointer;
+}
+
+.modal-form__wrap:hover > .modal-form__icon {
+  fill: $accent-color;
+  cursor: pointer;
+}
+
+.modal-form__wrap:focus-within > .modal-form__input {
+  border-color: $accent-color;
+}
+
+.modal-form__wrap:focus-within > .modal-form__icon {
+  fill: $accent-color;
+}
+
+.modal-form__input {
   display: inline-block;
   width: 100%;
   height: 40px;
@@ -125,25 +141,7 @@
   transition: border-color $transition-timing;
 }
 
-.input-wrap:hover > .input {
-  border-color: $accent-color;
-  cursor: pointer;
-}
-
-.input-wrap:hover > .icon-form {
-  fill: $accent-color;
-  cursor: pointer;
-}
-
-.input-wrap:focus-within > .input {
-  border-color: $accent-color;
-}
-
-.input-wrap:focus-within > .icon-form {
-  fill: $accent-color;
-}
-
-.textarea {
+.modal-form__textarea {
   display: block;
   width: 100%;
   height: 120px;
@@ -160,31 +158,30 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
 }
 
-.element-form:not(:last-child) {
+.modal-form__item:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.textarea::placeholder {
-  color: $placeholder-color;
-}
-
-.element-checkbox {
-  display: flex;
+.checkbox {
+  @extend %flex;
   justify-content: center;
-  align-items: center;
+
 }
 
-.checkbox-label {
-  display: flex;
+.checkbox__label {
+  @extend %flex;
   justify-content: space-around;
-  align-items: center;
   width: 423px;
   margin-bottom: 30px;
 }
 
-.checkbox {
+.checkbox__text {
   width: 16px;
   height: 15px;
   border-radius: 2px;
@@ -193,11 +190,11 @@
   border: 1px solid $secondary-color;
 }
 
-.link-form {
+.checkbox__link {
   color: $accent-color;
 }
 
-input:checked + .checkbox {
+input:checked + .checkbox__text {
   background-color: $accent-color;
   border-color: $accent-color;
   background-image: url(../image/icon-check.svg);
@@ -206,34 +203,7 @@ input:checked + .checkbox {
   background-position: center;
 }
 
-.button-form {
-  width: 200px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  border-radius: 4px;
+.checkbox__button {
+  @extend .button-footer;
   margin: 0 auto;
-  cursor: pointer;
-  border: none;
-
-  color: $main-color;
-  background: $accent-color;
-  box-shadow: $box-shadow-button;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
-  transition: border-color $transition-timing,
-    background $transition-timing;
-}
-
-.button-form:hover,
-.button-form:focus {
-  background: $icon-background-active;
-  border-color: $icon-background-active;
 }
