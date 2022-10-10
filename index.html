@@ -69,14 +69,14 @@
     <main>
       <!-- Hero -->
       <section class="hero">
-        <div class="hero__container ">
+        <div class="hero__container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button" data-modal-open>
             Замовити послугу
           </button>
         </div>
       </section>
-     <!--  Features-->
+      <!--  Features-->
       <section class="features">
         <h2 hidden>Особливості</h2>
         <div class="container">
@@ -354,7 +354,7 @@
     <footer class="footer">
       <div class="footer__container">
         <div>
-          <a href="./index.html" class="logo logo__flex"
+          <a href="./index.html" class="logo logo--flex"
             >Web<span class="logo__footer">Studio</span>
           </a>
           <address class="address">
@@ -381,7 +381,7 @@
             </ul>
           </address>
         </div>
-        <div class="footer__networks">
+        <div class="footer-networks">
           <b class="footer-networks__title">приєднуйтесь</b>
           <ul class="networks">
             <li class="networks__item">
@@ -436,13 +436,20 @@
           </svg>
         </button>
         <form class="modal-form">
-          <p class="modal-form__title">Залиште свої дані, ми вам передзвонимо</p>
+          <p class="modal-form__title">
+            Залиште свої дані, ми вам передзвонимо
+          </p>
           <div class="modal-form__inputs">
             <ul>
               <li class="modal-form__item">
                 <label for="name">Ім'я</label>
                 <div class="modal-form__wrap">
-                  <input class="modal-form__input" type="text" name="name" id="name" />
+                  <input
+                    class="modal-form__input"
+                    type="text"
+                    name="name"
+                    id="name"
+                  />
                   <svg class="modal-form__icon">
                     <use href="./image/icons.svg#icon-person-form"></use>
                   </svg>
@@ -454,7 +461,12 @@
                   <svg class="modal-form__icon">
                     <use href="./image/icons.svg#icon-phone-form"></use>
                   </svg>
-                  <input class="modal-form__input" type="tel" id="tel" name="tel" />
+                  <input
+                    class="modal-form__input"
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                  />
                 </div>
               </li>
               <li class="modal-form__item">
@@ -463,7 +475,12 @@
                   <svg class="modal-form__icon">
                     <use href="./image/icons.svg#icon-email-form"></use>
                   </svg>
-                  <input class="modal-form__input" type="email" id="email" name="email" />
+                  <input
+                    class="modal-form__input"
+                    type="email"
+                    id="email"
+                    name="email"
+                  />
                 </div>
               </li>
               <li class="modal-form__item">
@@ -483,11 +500,12 @@
                 class="visually-hidden"
                 type="checkbox"
                 id="checkbox-label"
-              /><span class="checkbox__text"></span>Погоджуюся з розсилкою та приймаю
+              /><span class="checkbox__text"></span>Погоджуюся з розсилкою та
+              приймаю
               <a href=" " class="checkbox__link">Умови договору</a></label
             >
           </div>
-          <button type="submit" class="checkbox__button">Відправити</button>
+          <button type="submit" class="checkbox-button">Відправити</button>
         </form>
       </div>
     </div>

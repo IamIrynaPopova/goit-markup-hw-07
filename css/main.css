@@ -38,7 +38,7 @@ img {
   padding-right: 15px;
 }
 
-.checkbox__label, .checkbox, .modal__close, .button-footer, .checkbox__button, .clients__link, .networks__link, .networks, .work__overlay, .features__icon, .header-navigation__link, .header-contacts__link, .header-navigation, .header-contacts, .header__container {
+.checkbox__label, .checkbox, .modal__close, .button-footer, .checkbox-button, .clients__link, .networks__link, .networks, .work__overlay, .features__icon, .header-navigation__link, .header-contacts__link, .header-navigation, .header-contacts, .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,7 +456,7 @@ img {
   text-decoration: none;
 }
 
-.logo__flex {
+.logo--flex {
   display: block;
   margin-top: 0;
   margin-bottom: 20px;
@@ -492,7 +492,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer__networks {
+.footer-networks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,7 +590,7 @@ img {
           justify-content: space-between;
 }
 
-.button-footer, .checkbox__button {
+.button-footer, .checkbox-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -612,7 +612,7 @@ img {
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-footer:hover, .checkbox__button:hover, .button-footer:focus, .checkbox__button:focus {
+.button-footer:hover, .checkbox-button:hover, .button-footer:focus, .checkbox-button:focus {
   background: #188ce8;
   border-color: #188ce8;
 }
@@ -988,6 +988,6 @@ input:checked + .checkbox__text {
   background-position: center;
 }
 
-.checkbox__button {
+.checkbox-button {
   margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */
